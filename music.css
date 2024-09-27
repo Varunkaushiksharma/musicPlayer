@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+.container {
+  background-color: aliceblue;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 25px 16px;
+  position: absolute;
+  z-index: 1;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container img {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  transition: opacity 0.2s ease;
+  /* Adjust the duration and timing function as needed */
+  opacity: 1;
+  /* Ensure the image is fully visible */
+}
+
+.container img.hidden {
+  opacity: 0;
+  /* Set to 0 when hiding the image */
+}
+
+
+.change {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prev,
+.play,
+.next {
+  font-size: 24px;
+  /* Adjust size as necessary */
+  cursor: pointer;
+  background-color: gray;
+  padding: 9px;
+  border-radius: 4px;
+}
+
+.prograss-bar {
+  width: 100%;
+  height: 10px;
+  background-color: lightgray;
+  border-radius: 5px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.prograss-bar::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: var(--progress, 0%);
+  /* Use the CSS variable */
+  background-color: dodgerblue;
+  border-radius: 5px;
+}

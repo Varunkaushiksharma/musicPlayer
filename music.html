@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="music.css">
+</head>
+<body>
+  <div class="background">
+    <img src="https://images.unsplash.com/photo-1651973999246-66f6701e91ba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+  </div>
+  <div class="container">
+    <img id="albumArt" src="" alt="Album Art">
+    <h1 id="songTitle">Song Title</h1>
+    <h2 id="artistName">Artist Name</h2>
+    <div class="prograss-bar" style="--progress: 0%;"></div>
+    <div class="change">
+      <i class="fas fa-backward prev"></i>
+      <i class="fas fa-play play"></i>
+      <i class="fas fa-forward next"></i>
+    </div>
+  </div>
+  <script src="music.js"></script>
+</body>
+</html>
